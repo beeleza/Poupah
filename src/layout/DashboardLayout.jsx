@@ -6,7 +6,8 @@ import {
   FaMoneyBillAlt,
   FaTimes,
 } from "react-icons/fa";
-import { Outlet } from "react-router";
+import { GrTransaction } from "react-icons/gr";
+import { Link, Outlet } from "react-router";
 
 const DashboardLayout = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
@@ -40,22 +41,28 @@ const DashboardLayout = () => {
         <nav className="mt-5">
           <ul>
             <li className="py-2 hover:bg-blue-800 transition-colors duration-200">
-              <a href="#" className="flex items-center p-2">
+              <Link to='/' className="flex items-center p-2">
                 <FaHome size={20} className="mr-2" />
                 {isSidebarOpen && <span>Dashboard</span>}
-              </a>
+              </Link>
             </li>
             <li className="py-2 hover:bg-blue-800 transition-colors duration-200">
-              <a href="#" className="flex items-center p-2">
+              <Link to='/transacoes' className="flex items-center p-2">
+                <GrTransaction size={20} className="mr-2" />
+                {isSidebarOpen && <span>Transações</span>}
+              </Link>
+            </li>
+            <li className="py-2 hover:bg-blue-800 transition-colors duration-200">
+              <Link to='receitas' className="flex items-center p-2">
                 <FaMoneyBillAlt size={20} className="mr-2" />
                 {isSidebarOpen && <span>Receitas</span>}
-              </a>
+              </Link>
             </li>
             <li className="py-2 hover:bg-blue-800 transition-colors duration-200">
-              <a href="#" className="flex items-center p-2">
+              <Link to='despesas' className="flex items-center p-2">
                 <FaChartLine size={20} className="mr-2" />
                 {isSidebarOpen && <span>Despesas</span>}
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>

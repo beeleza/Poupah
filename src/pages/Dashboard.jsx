@@ -54,7 +54,7 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="p-5">
+    <div>
       <h1 className="text-2xl font-bold mb-5">Dashboard Financeiro</h1>
 
       {/* Cards Informativos */}
